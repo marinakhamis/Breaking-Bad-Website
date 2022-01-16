@@ -1,0 +1,57 @@
+// Global variables
+$light-green: #81c09b;
+$dark-green: #183c28;
+$green: #286955;
+$primary-dark: #081f1f;
+$gray: #bebfc4;
+$white: #ffffff;
+$yellow: #eec643;
+$light-yellow: #fffc72;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: sans-serif;
+    background-color: $primary-dark;
+}
+nav {
+    padding: 20px;
+    .previous {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: $light-green;
+        color: $white;
+        outline: none;
+    }
+    .previous:hover {
+        cursor: pointer;
+        background-color: $yellow;
+    }
+
+    .return-home {
+        color: $white;
+    }
+}
+.char-logo {
+    margin: auto;
+    text-align: center;
+    .logo-img {
+        display: inline-block;
+        height: 60px;
+        margin: 10px;
+    }
+    .char-search {
+        display: inline-block;
+        border: 2px solid #ccc;
+        border-radius: 100px;
+        padding: 10px 15px;
+        transition: background-color 0.5 ease-in-out;
+    }
+}

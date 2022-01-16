@@ -1,0 +1,119 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+body nav {
+  padding: 5px;
+  background: rgba(3, 12, 1, 0.822);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body nav .logo {
+  margin-left: 20px;
+  width: 70px;
+  height: 45px;
+}
+
+body nav ul {
+  list-style-type: none;
+}
+
+body nav ul li {
+  display: inline-block;
+}
+
+body nav ul li a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 12px 14px;
+  color: #ffffff;
+}
+
+body nav ul li :hover {
+  cursor: pointer;
+  background-color: #286955;
+}
+
+body .home {
+  height: 70vh;
+  background-image: url("../img/walter.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+body .main {
+  background-color: #081f1f;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: #81c09b;
+}
+
+::selection {
+  background: #81c09b;
+}
+
+.episodes, .main {
+  padding: 10px;
+}
+
+.episodes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.episodes .episode {
+  margin: 10px;
+  border-radius: 0px;
+  height: 200px;
+  width: 200px;
+  background: #286955;
+}
+
+.episodes .episode .episode-img {
+  height: 40%;
+  width: 100%;
+}
+
+.episodes .episode .episode-info {
+  padding: 10px;
+}
+
+.episodes .episode .episode-num {
+  color: #BEBFC4;
+}
+
+.episodes :hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */
