@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/breaking-bad.png">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <title>Breaking Bad</title>
+</head>
+
+<body>
+
+    <!-- Start Header (Slider) -->
+    <header id="home" class="home">
+        <!-- Start NavBar -->
+        <nav>
+            <img class="logo" src="./img/bblogo.png">
+            <ul>
+                <li> <a href="#home">Home</a> </li>
+                <li> <a href="#episodes">Episodes</a> </li>
+                <li> <a href="./pages/characters.html" target="_blank">Characters</a> </li>
+                <li> <a href="#contact-me">Contact me</a> </li>
+            </ul>
+        </nav>
+        <!-- <div class="slide slide1"> -->
+        <!-- <h1> Slide 1 </h1> -->
+        <!-- </div> -->
+    </header>
+
+    <!-- Start Seasons/Episodes -->
+    <main id="main" class="main">
+        <h1>Episodes | Breaking Bad </h1>
+        <div id="series-data">
+            <!-- Select season -->
+            <select id="season" class="season-menu">
+                <option> Select season...</option>
+                <!-- Options are added dynamically by JS -->
+            </select>
+        </div>
+        <!-- Display episodes-->
+
+        <div class="episodes-hide" id="season-1">
+            <!-- <div class="episode"> -->
+            <!-- <img class="episode-img" src="img/episodecard.jpg"> -->
+            <!-- <div class="episode-info"> -->
+            <!-- <p class="episode-num"> Episode <b id="episode-num"> 1 </b> </p> -->
+            <!-- <h3 class="episode-title" id="episode-title"> Something Important</h3> -->
+            <!-- <p class="air_date"> Lorem ipsum dolor sit amet.</p> -->
+            <!-- </div> -->
+            <!-- </div> -->
+        </div>
+        <div class="episodes-hide" id="season-2"></div>
+        <div class="episodes-hide" id="season-3"></div>
+        <div class="episodes-hide" id="season-4"></div>
+        <div class="episodes-hide" id="season-5"></div>
+    </main>
+
+
+    <footer id="contact-me">
+        <p> Made with ♥ By Marina khamis </p>
+    </footer>
+    <script src="./js/app.js"></script>
+    <script src="./js/views/slider.js"></script>
+    <script src="./js/views/episodes.js"></script>
+</body>
+
+</html>

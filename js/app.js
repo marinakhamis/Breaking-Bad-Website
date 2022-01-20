@@ -10,33 +10,44 @@ fetch("https://www.breakingbadapi.com/api/episodes")
             .filter((episode) => episode.series === "Breaking Bad")
             .filter((episode) => episode.season)
             //convert those episode objects to their season value
-            .map((episode) => episode.season);
+            .map((episode) => episode.season)
         return seasons;
-    }).then((seasons) => {
-
+    })
+    .then((seasons) => {
+        // This part of code isn't really important 
+        // I could've done it using plain html
+        // But I wanted to practice on array methods
+        //Remove duplicated seasons
         const deSeason = [...new Set(seasons)];
-        console.log(deSeason); // [1, 2, 3, 4, 5]
+        // console.log(deSeason); // [1, 2, 3, 4, 5]
+        const seasonsArr = [];
+        for (let s = 1; s < deSeason.length; s++) {
+            let season = document.getElementById("season");
+            let sNum = document.createElement("option");
+            sNum.classList = `season season-${s}`
+            sNum.value = `season-${s}`;
+            sNum.innerHTML = `Season ${s}`
+            season.append(sNum);
+            seasonsArr.push(s);
+        }
+        return seasonsArr;
     })
 
 
-// fetch("https://www.breakingbadapi.com/api/episodes")
-//     .then((res) => res.json())
-//     .then((episodes) => {
-//         // Take the array of episodes
-//         const seasons = episodes
-//             // and only keep the Breaking Bad episodes
-//             .filter((episode) => episode.series === "Breaking Bad")
-//             // and only keep the episodes with an affiliated season
-//             .filter((episode) => episode.season)
+function showSeasons() {
+    document
+        .getElementById('season')
+        .addEventListener('change', function () {
+            'use strict';
+            var vis = document.querySelector('.episodes-show'),
+                season = document.getElementById(this.value);
+            if (vis !== null) {
+                vis.className = 'episodes-hide';
+            }
+            if (season !== null) {
+                season.className = 'episodes-show';
+            }
+        });
+}
 
-//             // and convert those episode objects to their season value
-//             .map((episode) => episode.season);
-//             console.log(seasons)
-
-//         // Do stuff with the seasons array
-//     });
-
-
-// const deduped = [...new Set(seasons)];
-// console.log(deduped); // [1, 2, 3, 4, 6]
-
+showSeasons();

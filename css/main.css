@@ -76,11 +76,12 @@ body .main {
   background: #81c09b;
 }
 
-.episodes, .main {
+.episodes-show,
+.main {
   padding: 10px;
 }
 
-.episodes {
+.episodes-show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,7 +93,7 @@ body .main {
       flex-wrap: wrap;
 }
 
-.episodes .episode {
+.episodes-show .episode {
   margin: 10px;
   border-radius: 0px;
   height: 200px;
@@ -100,20 +101,39 @@ body .main {
   background: #286955;
 }
 
-.episodes .episode .episode-img {
+.episodes-show .episode .episode-img {
   height: 40%;
   width: 100%;
 }
 
-.episodes .episode .episode-info {
+.episodes-show .episode .episode-info {
   padding: 10px;
 }
 
-.episodes .episode .episode-num {
-  color: #BEBFC4;
+.episodes-show .episode .episode-num {
+  color: #bebfc4;
 }
 
-.episodes :hover {
+.episodes-show :hover {
   cursor: pointer;
+}
+
+.season-menu,
+.season {
+  width: 110px;
+  padding: 10px;
+  height: 40px;
+  color: #ffffff;
+  outline: none;
+  background-color: #81c09b;
+  border: none;
+}
+
+.season-1:hover {
+  background-color: #5b866d;
+}
+
+.episodes-hide {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

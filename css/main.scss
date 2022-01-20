@@ -1,90 +1,111 @@
-// Global variables 
+// Global variables
 $light-green: #81c09b;
-$dark-green: #183C28;
+$dark-green: #183c28;
 $green: #286955;
 $primary-dark: #081f1f;
-$gray: #BEBFC4;
+$gray: #bebfc4;
 $white: #ffffff;
-$yellow: #EEC643;
-$light-yellow: #FFFC72;
+$yellow: #eec643;
+$light-yellow: #fffc72;
 * {
     box-sizing: border-box;
     margin: 0;
     box-sizing: border-box;
 }
-html{
+html {
     scroll-behavior: smooth;
-
 }
 body {
     font-family: sans-serif;
-    nav{
+    nav {
         padding: 5px;
         background: rgba(3, 12, 1, 0.822);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        .logo{
+        .logo {
             margin-left: 20px;
             width: 70px;
             height: 45px;
         }
-        ul{
+        ul {
             list-style-type: none;
-            li{
+            li {
                 display: inline-block;
-                a{
+                a {
                     display: block;
                     text-decoration: none;
                     text-align: center;
                     padding: 12px 14px;
                     color: $white;
-                }:hover{
+                }
+                :hover {
                     cursor: pointer;
                     background-color: $green;
                 }
             }
         }
     }
-    .home{
+    .home {
         height: 70vh;
         background-image: url("../img/walter.png");
-        background-repeat:no-repeat ;
-        background-size: cover ; 
-        background-position:center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
-    .main{
-        background-color:  $primary-dark;
+    .main {
+        background-color: $primary-dark;
         color: $white;
     }
-}::selection {
+}
+::selection {
     background: $light-green;
 }
-
-.episodes, .main {padding: 10px;}
-.episodes{
+.episodes-show,
+.main {
+    padding: 10px;
+}
+.episodes-show {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     // justify-content: space-evenly;
-    .episode{
+    .episode {
         margin: 10px;
         border-radius: 0px;
         height: 200px;
         width: 200px;
         background: $green;
-        .episode-img{
+        .episode-img {
             height: 40%;
             width: 100%;
-        }   
-        .episode-info{
+        }
+        .episode-info {
             padding: 10px;
-        }   
-        .episode-num{
+        }
+        .episode-num {
             color: $gray;
         }
-    }:hover{
+    }
+    :hover {
         cursor: pointer;
     }
 }
 
+.season-menu,
+.season {
+    width: 110px;
+    padding: 10px;
+    height: 40px;
+    color: $white;
+    outline: none;
+    background-color: $light-green;
+    border: none;
+}
+.season-1:hover {
+    background-color: #5b866d;
+}
+
+.episodes-hide {
+    display: none;
+}
