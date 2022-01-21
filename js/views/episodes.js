@@ -1,3 +1,6 @@
+
+
+
 fetch("https://www.breakingbadapi.com/api/episodes")
     .then((res) => { return res.json() })
     .then((data) => {
@@ -5,6 +8,7 @@ fetch("https://www.breakingbadapi.com/api/episodes")
             // only keep the Breaking Bad episodes
             //Because the API has another series
             .filter((episode) => episode.series === "Breaking Bad")
+        console.log(episodes)
 
         return episodes;
     })
@@ -38,12 +42,14 @@ function addEpisodes(e, x) {
     episodeCard.className = "episode";
     episodeCard.innerHTML =
         `
-    <img class="episode-img" src="img/episodecard.jpg">
     <div class="episode-info">
-        <p class="episode-num"> Episode <b id="episode-num"> ${e.episode} </b> </p>
+        <p class="episode-num"> <b id="episode-num"> ${e.episode} </b> </p>
         <h3 class="episode-title" id="episode-title"> ${e.title} </h3>
         <p class="air_date"> ${e.air_date}</p>
     </div>
     `
     document.getElementById(`season-${x}`).append(episodeCard);
 }
+
+
+

@@ -15,7 +15,6 @@ body {
 
 body nav {
   padding: 5px;
-  background: rgba(3, 12, 1, 0.822);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,20 +51,15 @@ body nav ul li a {
 
 body nav ul li :hover {
   cursor: pointer;
-  background-color: #286955;
+  color: #fffc72;
 }
 
 body .home {
   height: 70vh;
-  background-image: url("../img/walter.png");
+  background-image: url("../img/breaking-bad.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-body .main {
-  background-color: #081f1f;
-  color: #ffffff;
 }
 
 ::-moz-selection {
@@ -74,6 +68,39 @@ body .main {
 
 ::selection {
   background: #81c09b;
+}
+
+.main {
+  background-color: #f8f9fa;
+}
+
+.main .season-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .season-menu :hover {
+  cursor: pointer;
+  background-color: #81fbb8;
+}
+
+.main .season-menu :focus {
+  background-color: #81fbb8;
+}
+
+.main .season-menu :target {
+  background-color: #81fbb8;
 }
 
 .episodes-show,
@@ -91,49 +118,116 @@ body .main {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .episodes-show .episode {
+  width: 300px;
+  height: 150px;
+  border-radius: 10px;
+  padding: 10px;
   margin: 10px;
-  border-radius: 0px;
-  height: 200px;
-  width: 200px;
-  background: #286955;
-}
-
-.episodes-show .episode .episode-img {
-  height: 40%;
-  width: 100%;
+  text-align: center;
+  background-color: #ffffff;
+  color: #4e4e4e;
+  -webkit-box-shadow: -1px 1px 1px 0px rgba(112, 112, 112, 0.44);
+          box-shadow: -1px 1px 1px 0px rgba(112, 112, 112, 0.44);
 }
 
 .episodes-show .episode .episode-info {
-  padding: 10px;
+  line-height: 30px;
 }
 
 .episodes-show .episode .episode-num {
-  color: #bebfc4;
-}
-
-.episodes-show :hover {
-  cursor: pointer;
-}
-
-.season-menu,
-.season {
-  width: 110px;
-  padding: 10px;
+  width: 40px;
   height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 22px;
+  color: white;
+  background-image: linear-gradient(135deg, #81fbb8 10%, #28c76f 100%);
+  margin: 0 auto;
+  z-index: 1;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  line-height: 40px;
+}
+
+.episode:hover {
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  cursor: pointer;
+  background-color: #81fbb8;
+}
+
+.season {
+  padding: 10px;
   color: #ffffff;
+  margin-left: 10px;
   outline: none;
   background-color: #81c09b;
   border: none;
 }
 
-.season-1:hover {
-  background-color: #5b866d;
+.pick-season {
+  padding: 10px;
+}
+
+.season {
+  margin: 10px;
+  padding: 12px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 5px;
+  display: block;
+  background-color: #28c76f;
+}
+
+.season:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
 
 .episodes-hide {
   display: none;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #212529;
+  color: #dee1e4;
+}
+
+footer .contact-icons {
+  margin: 5px;
+  padding: 5px;
+}
+
+footer .contact-icons > a {
+  margin: 5px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #dee1e4;
+}
+
+footer a > i {
+  font-size: 20px;
+}
+
+footer a > i:hover {
+  color: #81fbb8;
 }
 /*# sourceMappingURL=main.css.map */

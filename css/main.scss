@@ -7,6 +7,8 @@ $gray: #bebfc4;
 $white: #ffffff;
 $yellow: #eec643;
 $light-yellow: #fffc72;
+$secondary-dark: #435a64;
+$light-gray: #f8f9fa;
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,7 +21,6 @@ body {
     font-family: sans-serif;
     nav {
         padding: 5px;
-        background: rgba(3, 12, 1, 0.822);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -41,25 +42,42 @@ body {
                 }
                 :hover {
                     cursor: pointer;
-                    background-color: $green;
+                    color: $light-yellow;
                 }
             }
         }
     }
     .home {
         height: 70vh;
-        background-image: url("../img/walter.png");
+        background-image: url("../img/breaking-bad.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
     }
-    .main {
-        background-color: $primary-dark;
-        color: $white;
-    }
 }
 ::selection {
     background: $light-green;
+}
+
+.main {
+    background-color: $light-gray;
+    .season-menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: center;
+        :hover {
+            cursor: pointer;
+            background-color: #81fbb8;
+        }
+        :focus {
+            background-color: #81fbb8;
+        }
+        :target {
+            background-color: #81fbb8;
+        }
+    }
 }
 .episodes-show,
 .main {
@@ -69,43 +87,99 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
     // justify-content: space-evenly;
     .episode {
+        width: 300px;
+        height: 150px;
+        border-radius: 10px;
+        padding: 10px;
         margin: 10px;
-        border-radius: 0px;
-        height: 200px;
-        width: 200px;
-        background: $green;
-        .episode-img {
-            height: 40%;
-            width: 100%;
-        }
+        text-align: center;
+        background-color: $white;
+        color: #4e4e4e;
+        box-shadow: -1px 1px 1px 0px rgba(112, 112, 112, 0.44);
         .episode-info {
-            padding: 10px;
+            line-height: 30px;
         }
         .episode-num {
-            color: $gray;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 22px;
+            color: white;
+            background-image: linear-gradient(135deg, #81fbb8 10%, #28c76f 100%);
+            margin: 0 auto;
+            z-index: 1;
+            transform: translateY(-50%);
+            line-height: 40px;
         }
     }
-    :hover {
-        cursor: pointer;
-    }
+}
+.episode:hover {
+    transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    cursor: pointer;
+    background-color: #81fbb8;
 }
 
-.season-menu,
 .season {
-    width: 110px;
     padding: 10px;
-    height: 40px;
     color: $white;
+    margin-left: 10px;
     outline: none;
     background-color: $light-green;
     border: none;
 }
-.season-1:hover {
-    background-color: #5b866d;
+.pick-season {
+    padding: 10px;
+}
+
+.season {
+    margin: 10px;
+    padding: 12px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 5px;
+    display: block;
+    background-color: #28c76f;
+}
+
+.season:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
 }
 
 .episodes-hide {
     display: none;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #212529;
+    color: #dee1e4;
+    .contact-icons {
+        margin: 5px;
+        padding: 5px;
+    }
+    .contact-icons > a {
+        margin: 5px;
+    }
+    a {
+        text-decoration: none;
+        color: #dee1e4;
+    }
+    a > i {
+        font-size: 20px;
+    }
+    a > i:hover {
+        color: #81fbb8;
+    }
 }

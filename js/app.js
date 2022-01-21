@@ -23,31 +23,30 @@ fetch("https://www.breakingbadapi.com/api/episodes")
         const seasonsArr = [];
         for (let s = 1; s < deSeason.length; s++) {
             let season = document.getElementById("season");
-            let sNum = document.createElement("option");
+            let sNum = document.createElement("input");
+            sNum.type = "button";
             sNum.classList = `season season-${s}`
-            sNum.value = `season-${s}`;
-            sNum.innerHTML = `Season ${s}`
+            sNum.name = `season-${s}`;
+            sNum.value = `Season ${s}`;
             season.append(sNum);
             seasonsArr.push(s);
+
         }
+
+        const btns = document.querySelectorAll('input')
+        btns.forEach(btn => {
+            btn.addEventListener('click', function showSeason() {
+                var vis = document.querySelector('.episodes-show'),
+                    season = document.getElementById(this.name);
+                if (vis !== null) {
+                    vis.className = 'episodes-hide';
+                } name
+                if (season !== null) {
+                    season.className = 'episodes-show';
+                }
+            })
+
+        });
         return seasonsArr;
     })
 
-
-function showSeasons() {
-    document
-        .getElementById('season')
-        .addEventListener('change', function () {
-            'use strict';
-            var vis = document.querySelector('.episodes-show'),
-                season = document.getElementById(this.value);
-            if (vis !== null) {
-                vis.className = 'episodes-hide';
-            }
-            if (season !== null) {
-                season.className = 'episodes-show';
-            }
-        });
-}
-
-showSeasons();
