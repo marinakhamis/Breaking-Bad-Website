@@ -2,13 +2,15 @@
 $light-green: #81c09b;
 $dark-green: #183c28;
 $green: #286955;
-$primary-dark: #081f1f;
+$primary-dark: #051d05;
 $gray: #bebfc4;
 $white: #ffffff;
 $yellow: #eec643;
 $light-yellow: #fffc72;
 $secondary-dark: #435a64;
 $light-gray: #f8f9fa;
+$dark-black: #212529;
+$orange: #c27a40;
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,40 +21,76 @@ html {
 }
 body {
     font-family: sans-serif;
-    nav {
-        padding: 5px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        .logo {
-            margin-left: 20px;
-            width: 70px;
-            height: 45px;
-        }
-        ul {
-            list-style-type: none;
-            li {
-                display: inline-block;
-                a {
-                    display: block;
-                    text-decoration: none;
-                    text-align: center;
-                    padding: 12px 14px;
-                    color: $white;
-                }
-                :hover {
-                    cursor: pointer;
-                    color: $light-yellow;
+
+    .home {
+        height: 70vh;
+        display: grid;
+        grid-template-rows: 0.3fr 1.5fr;
+        grid-template-columns: 1fr 1.2fr;
+        line-height: 1.6em;
+        color: $light-gray;
+        background-color: $primary-dark;
+        letter-spacing: 0.5px;
+        font-size: 16px;
+
+        nav {
+            grid-area: 1/1/2/3;
+            z-index: 1;
+            padding: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #000000c9;
+            height: 55px;
+            .logo {
+                margin-left: 20px;
+                width: 70px;
+                height: 45px;
+            }
+            ul {
+                list-style-type: none;
+                li {
+                    display: inline-block;
+                    a {
+                        color: $white;
+                        display: block;
+                        text-decoration: none;
+                        text-align: center;
+                        padding: 10px 12px;
+                    }
+                    :hover {
+                        cursor: pointer;
+                        background-color: #28c76f;
+                    }
                 }
             }
         }
-    }
-    .home {
-        height: 70vh;
-        background-image: url("../img/breaking-bad.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        .info-wrapper {
+            grid-area: 2/1/3/2;
+            padding: 30px;
+            margin-left: 30px;
+            line-height: 1.7em;
+            color: #e7e7e7;
+            .header-info {
+                line-height: 1.9em;
+                margin-bottom: 20px;
+                h2 {
+                    color: #28c76f;
+                }
+            }
+            .header-description {
+                color: #c9c9c9;
+            }
+        }
+        .header-image {
+            grid-area: 1/2/3/3;
+            background-image: url("../img/walter-art.png");
+            clip-path: circle(80.9% at 100% 49%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right;
+            height: inherit;
+        }
     }
 }
 ::selection {
@@ -112,7 +150,6 @@ body {
             color: white;
             background-image: linear-gradient(135deg, #81fbb8 10%, #28c76f 100%);
             margin: 0 auto;
-            z-index: 1;
             transform: translateY(-50%);
             line-height: 40px;
         }
@@ -182,4 +219,10 @@ footer {
     a > i:hover {
         color: #81fbb8;
     }
+}
+
+canvas {
+    display: block;
+    position: fixed;
+    z-index: -1;
 }

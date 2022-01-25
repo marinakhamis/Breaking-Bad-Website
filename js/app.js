@@ -6,7 +6,7 @@ fetch("https://www.breakingbadapi.com/api/episodes")
         // So we can filter the seasons from episodes
         let seasons = episodes
             // only keep the Breaking Bad episodes
-            //Because the API has another series 
+            //Because the API has another series
             .filter((episode) => episode.series === "Breaking Bad")
             .filter((episode) => episode.season)
             //convert those episode objects to their season value
@@ -14,7 +14,7 @@ fetch("https://www.breakingbadapi.com/api/episodes")
         return seasons;
     })
     .then((seasons) => {
-        // This part of code isn't really important 
+        // This part of code isn't really important
         // I could've done it using plain html
         // But I wanted to practice on array methods
         //Remove duplicated seasons
@@ -49,4 +49,7 @@ fetch("https://www.breakingbadapi.com/api/episodes")
         });
         return seasonsArr;
     })
+
+
+
 

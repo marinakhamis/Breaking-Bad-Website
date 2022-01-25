@@ -1,6 +1,3 @@
-
-
-
 fetch("https://www.breakingbadapi.com/api/episodes")
     .then((res) => { return res.json() })
     .then((data) => {
@@ -11,10 +8,12 @@ fetch("https://www.breakingbadapi.com/api/episodes")
         console.log(episodes)
 
         return episodes;
+
     })
     .then((episodes) => {
+        console.log(episodes)
         episodes.forEach(e => {
-            if (e.season === "1") {
+            if (e.season === "1" || e.season === " 1") {
                 //Season 1
                 addEpisodes(e, 1);
             } else if (e.season === "2") {
@@ -28,9 +27,14 @@ fetch("https://www.breakingbadapi.com/api/episodes")
             } else if (e.season === "4") {
                 //Season 4
                 addEpisodes(e, 4);
+
             } else {
                 //Season 5
                 addEpisodes(e, 5);
+            }
+            // To append all episodes in the "ALL" btn
+            if (e.season != null) {
+                addEpisodes(e, 0);
             }
         });
     })

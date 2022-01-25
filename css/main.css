@@ -13,7 +13,28 @@ body {
   font-family: sans-serif;
 }
 
-body nav {
+body .home {
+  height: 70vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 0.3fr 1.5fr;
+      grid-template-rows: 0.3fr 1.5fr;
+  -ms-grid-columns: 1fr 1.2fr;
+      grid-template-columns: 1fr 1.2fr;
+  line-height: 1.6em;
+  color: #f8f9fa;
+  background-color: #051d05;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+}
+
+body .home nav {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1/1/2/3;
+  z-index: 1;
   padding: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,41 +46,75 @@ body nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: #000000c9;
+  height: 55px;
 }
 
-body nav .logo {
+body .home nav .logo {
   margin-left: 20px;
   width: 70px;
   height: 45px;
 }
 
-body nav ul {
+body .home nav ul {
   list-style-type: none;
 }
 
-body nav ul li {
+body .home nav ul li {
   display: inline-block;
 }
 
-body nav ul li a {
+body .home nav ul li a {
+  color: #ffffff;
   display: block;
   text-decoration: none;
   text-align: center;
-  padding: 12px 14px;
-  color: #ffffff;
+  padding: 10px 12px;
 }
 
-body nav ul li :hover {
+body .home nav ul li :hover {
   cursor: pointer;
-  color: #fffc72;
+  background-color: #28c76f;
 }
 
-body .home {
-  height: 70vh;
-  background-image: url("../img/breaking-bad.jpg");
+body .home .info-wrapper {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 2/1/3/2;
+  padding: 30px;
+  margin-left: 30px;
+  line-height: 1.7em;
+  color: #e7e7e7;
+}
+
+body .home .info-wrapper .header-info {
+  line-height: 1.9em;
+  margin-bottom: 20px;
+}
+
+body .home .info-wrapper .header-info h2 {
+  color: #28c76f;
+}
+
+body .home .info-wrapper .header-description {
+  color: #c9c9c9;
+}
+
+body .home .header-image {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1/2/3/3;
+  background-image: url("../img/walter-art.png");
+  -webkit-clip-path: circle(80.9% at 100% 49%);
+          clip-path: circle(80.9% at 100% 49%);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: right;
+  height: inherit;
 }
 
 ::-moz-selection {
@@ -150,7 +205,6 @@ body .home {
   color: white;
   background-image: linear-gradient(135deg, #81fbb8 10%, #28c76f 100%);
   margin: 0 auto;
-  z-index: 1;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   line-height: 40px;
@@ -229,5 +283,11 @@ footer a > i {
 
 footer a > i:hover {
   color: #81fbb8;
+}
+
+canvas {
+  display: block;
+  position: fixed;
+  z-index: -1;
 }
 /*# sourceMappingURL=main.css.map */
