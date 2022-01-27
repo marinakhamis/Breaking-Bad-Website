@@ -40,7 +40,7 @@ fetch("https://www.breakingbadapi.com/api/episodes")
                     season = document.getElementById(this.name);
                 if (vis !== null) {
                     vis.className = 'episodes-hide';
-                } name
+                } 
                 if (season !== null) {
                     season.className = 'episodes-show';
                 }

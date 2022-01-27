@@ -47,7 +47,7 @@ function addEpisodes(e, x) {
     episodeCard.innerHTML =
         `
     <div class="episode-info">
-        <p class="episode-num"> <b id="episode-num"> ${e.episode} </b> </p>
+        <p class="episode-num"> <i class="fas fa-flask"></i> <b id="season-num"> s${e.season}. </b><b id="episode-num">e${e.episode} </b> </p>
         <h3 class="episode-title" id="episode-title"> ${e.title} </h3>
         <p class="air_date"> ${e.air_date}</p>
     </div>

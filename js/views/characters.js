@@ -13,3 +13,20 @@
 
 
 
+
+const btns = document.querySelectorAll('.more')
+btns.forEach(btn => {
+    btn.addEventListener('click', function showCharacter() {
+        var vis = document.querySelector('.char-show'),
+            character = document.getElementById(this.name);
+        if (vis !== null) {
+            vis.className = 'char-hide';
+        }
+        else if (character !== null) {
+            character.className = 'char-show';
+        } else {
+            character.className = 'char-hide';
+
+        }
+    })
+})

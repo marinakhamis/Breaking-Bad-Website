@@ -183,9 +183,8 @@ body .home .header-image {
   width: 300px;
   height: 150px;
   border-radius: 10px;
-  padding: 10px;
+  padding: 20px;
   margin: 10px;
-  text-align: center;
   background-color: #ffffff;
   color: #4e4e4e;
   -webkit-box-shadow: -1px 1px 1px 0px rgba(112, 112, 112, 0.44);
@@ -197,17 +196,10 @@ body .home .header-image {
 }
 
 .episodes-show .episode .episode-num {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 22px;
-  color: white;
-  background-image: linear-gradient(135deg, #81fbb8 10%, #28c76f 100%);
-  margin: 0 auto;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  line-height: 40px;
+  text-align: left;
+  font-size: 20px;
+  padding-bottom: 10px;
+  color: #28c76f;
 }
 
 .episode:hover {
