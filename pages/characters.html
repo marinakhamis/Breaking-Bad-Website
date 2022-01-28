@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breaking Bad Characters</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
     <link rel="icon" href="https://img.icons8.com/color/48/000000/breaking-bad.png">
     <link rel="stylesheet" href="../css/characters.css">
 </head>
@@ -18,16 +21,19 @@
     <div class="char-logo">
         <img src="../img/bblogo.png" class="logo-img">
         <br>
-        <input type="search" id="char-search" class="char-search" placeholder="Search...">
+        <span class="search-container">
+            <input type="text" id="char-search" class="char-search" placeholder="Search...">
+            <i class="fas fa-search"></i>
+        </span>
     </div>
-    <!-- Info about characters-->
-    <div id="characters">
-        <div class="character">
 
-        </div>
+    <div id="loader" class="center"></div>
+    <!-- Info about characters-->
+    <div id="characters" class="characters">
     </div>
 
     <script src="../js/views/characters.js"></script>
+
 
 </body>
 

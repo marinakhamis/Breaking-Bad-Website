@@ -5,13 +5,10 @@ fetch("https://www.breakingbadapi.com/api/episodes")
             // only keep the Breaking Bad episodes
             //Because the API has another series
             .filter((episode) => episode.series === "Breaking Bad")
-        console.log(episodes)
-
         return episodes;
 
     })
     .then((episodes) => {
-        console.log(episodes)
         episodes.forEach(e => {
             if (e.season === "1" || e.season === " 1") {
                 //Season 1
@@ -38,6 +35,34 @@ fetch("https://www.breakingbadapi.com/api/episodes")
             }
         });
     })
+    .then(() => {
+        const all = document.getElementById("season-0");
+        const showMoreBtn = document.createElement("button");
+        showMoreBtn.id = "show-more"
+        showMoreBtn.className = "show-more"
+        showMoreBtn.innerText = "Show more"
+
+        all.appendChild(showMoreBtn)
+    })
+    .then(() => {
+        const loadmore = document.querySelector('#show-more');
+        let currentEpisodes = 0;
+        loadmore.addEventListener('click', (e) => {
+            const episodesList = [...document.querySelectorAll('#season-0 .episode')];
+            for (let i = currentEpisodes; i < currentEpisodes + 9; i++) {
+                if (episodesList[i]) {
+                    episodesList[i].style.display = 'block';
+                }
+            }
+            currentEpisodes += 10;
+
+            // Load more button will be hidden after list fully loaded
+            if (currentEpisodes >= episodesList.length) {
+                event.target.style.display = 'none';
+            }
+        })
+
+    })
 
 function addEpisodes(e, x) {
     // e => episode
@@ -46,6 +71,8 @@ function addEpisodes(e, x) {
     episodeCard.className = "episode";
     episodeCard.innerHTML =
         `
+        <p class="epi_num"> #${e.episode_id} </p>
+
     <div class="episode-info">
         <p class="episode-num"> <i class="fas fa-flask"></i> <b id="season-num"> s${e.season}. </b><b id="episode-num">e${e.episode} </b> </p>
         <h3 class="episode-title" id="episode-title"> ${e.title} </h3>
@@ -53,7 +80,11 @@ function addEpisodes(e, x) {
     </div>
     `
     document.getElementById(`season-${x}`).append(episodeCard);
+
+
 }
+
+
 
 
 

@@ -7,15 +7,18 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
+  height: 100%;
   font-family: sans-serif;
   color: #fff;
-  background-color: #f4d03f;
-  background-image: linear-gradient(132deg, #f5c918 0%, #10947a 100%);
+  background: #286955;
+  background: radial-gradient(circle, #286955 0%, #0e2518 100%);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 nav {
@@ -61,7 +64,7 @@ nav .return-home {
 }
 
 .characters {
-  margin: 10px auto;
+  margin: 0 auto;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,6 +75,9 @@ nav .return-home {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .char-hide {
@@ -82,6 +88,7 @@ nav .return-home {
   width: 250px;
   height: 300px;
   background-color: #0e1a02;
+  border-radius: 10px;
   position: relative;
   margin: 10px;
   -webkit-transition: all 0.5s ease;
@@ -91,14 +98,15 @@ nav .return-home {
 .character .more {
   height: 30px;
   width: 30px;
-  background-color: #db690b;
+  background-color: #eec643;
   outline: none;
   border: none;
   color: #fff;
   line-height: 30px;
   position: absolute;
-  right: 2%;
-  top: 2%;
+  right: 3%;
+  top: 3%;
+  border-radius: inherit;
 }
 
 .character .more:hover {
@@ -106,6 +114,7 @@ nav .return-home {
 }
 
 .character .char-img {
+  border-radius: inherit;
   display: block;
   width: inherit;
   height: inherit;
@@ -119,6 +128,8 @@ nav .return-home {
   padding: 10px;
   position: absolute;
   bottom: 0;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
 }
 
 .character .char-show {
@@ -149,7 +160,8 @@ nav .return-home {
 }
 
 .character .char-show > p > .fas {
-  color: #34e934;
+  color: #81c09b;
+  margin-right: 5px;
 }
 
 @-webkit-keyframes showcard {
@@ -176,5 +188,82 @@ nav .return-home {
   100% {
     height: 80%;
   }
+}
+
+.char-search {
+  width: 20%;
+  padding: 12px 24px;
+  background-color: transparent;
+  /* transition: transform 250ms ease-in-out; */
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.fa-search::before {
+  margin-left: -50px;
+}
+
+.char-search::-webkit-input-placeholder {
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+.char-search:-ms-input-placeholder {
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+.char-search::-ms-input-placeholder {
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+.char-search::placeholder {
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+.char-search:focus {
+  outline: none;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #fff;
+  border-radius: 0;
+  background-position: 100% center;
+}
+
+#loader {
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid #444444;
+  width: 70px;
+  height: 70px;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 /*# sourceMappingURL=characters.css.map */
