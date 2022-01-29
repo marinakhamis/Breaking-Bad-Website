@@ -37,6 +37,7 @@ nav {
         background-color: $light-green;
         color: $white;
         outline: none;
+        border-radius: 10px;
     }
     .previous:hover {
         cursor: pointer;
@@ -71,6 +72,7 @@ nav {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
 }
 
 .char-hide {
@@ -89,7 +91,7 @@ nav {
     .more {
         height: 30px;
         width: 30px;
-        background-color: $yellow;
+        background-color: transparent;
         outline: none;
         border: none;
         color: #fff;
@@ -100,6 +102,7 @@ nav {
         border-radius: inherit;
         &:hover {
             cursor: pointer;
+            text-shadow: 0.5px 0.5px 0px rgb(27, 27, 27);
         }
     }
 
@@ -133,6 +136,8 @@ nav {
         padding: 20px;
         animation-name: showcard;
         animation-duration: 0.5s;
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
     }
     .char-show > p {
         border-bottom: 1px solid rgb(194, 201, 194);
@@ -189,7 +194,7 @@ nav {
     border-top: 12px solid #444444;
     width: 70px;
     height: 70px;
-    animation: spin 1s linear infinite;
+    animation: spin 3s linear infinite;
 }
 
 @keyframes spin {
@@ -205,4 +210,10 @@ nav {
     left: 0;
     right: 0;
     margin: auto;
+}
+
+.particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    z-index: -1;
 }

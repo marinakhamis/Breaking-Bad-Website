@@ -32,6 +32,7 @@ nav .previous {
   background-color: #81c09b;
   color: #ffffff;
   outline: none;
+  border-radius: 10px;
 }
 
 nav .previous:hover {
@@ -78,6 +79,7 @@ nav .return-home {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 .char-hide {
@@ -98,7 +100,7 @@ nav .return-home {
 .character .more {
   height: 30px;
   width: 30px;
-  background-color: #eec643;
+  background-color: transparent;
   outline: none;
   border: none;
   color: #fff;
@@ -111,6 +113,7 @@ nav .return-home {
 
 .character .more:hover {
   cursor: pointer;
+  text-shadow: 0.5px 0.5px 0px #1b1b1b;
 }
 
 .character .char-img {
@@ -153,6 +156,8 @@ nav .return-home {
           animation-name: showcard;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
 }
 
 .character .char-show > p {
@@ -240,8 +245,8 @@ nav .return-home {
   border-top: 12px solid #444444;
   width: 70px;
   height: 70px;
-  -webkit-animation: spin 1s linear infinite;
-          animation: spin 1s linear infinite;
+  -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
 }
 
 @-webkit-keyframes spin {
@@ -265,5 +270,11 @@ nav .return-home {
   left: 0;
   right: 0;
   margin: auto;
+}
+
+.particles-js-canvas-el {
+  position: absolute;
+  top: 0;
+  z-index: -1;
 }
 /*# sourceMappingURL=characters.css.map */

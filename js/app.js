@@ -54,7 +54,6 @@ fetch("https://www.breakingbadapi.com/api/episodes")
 
 
 // To top button
-//Get the button
 var mybutton = document.getElementById("to-top");
 
 // When the user scrolls down 20px from the top of the document, show the button

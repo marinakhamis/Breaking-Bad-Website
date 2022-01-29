@@ -13,7 +13,7 @@ body {
   font-family: sans-serif;
 }
 
-body .home {
+.home {
   height: 70vh;
   display: -ms-grid;
   display: grid;
@@ -28,7 +28,7 @@ body .home {
   font-size: 16px;
 }
 
-body .home nav {
+.home nav {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
@@ -50,21 +50,21 @@ body .home nav {
   height: 55px;
 }
 
-body .home nav .logo {
+.home nav .logo {
   margin-left: 20px;
   width: 70px;
   height: 45px;
 }
 
-body .home nav ul {
+.home nav ul {
   list-style-type: none;
 }
 
-body .home nav ul li {
+.home nav ul li {
   display: inline-block;
 }
 
-body .home nav ul li a {
+.home nav ul li a {
   color: #ffffff;
   display: block;
   text-decoration: none;
@@ -72,12 +72,12 @@ body .home nav ul li a {
   padding: 10px 12px;
 }
 
-body .home nav ul li :hover {
+.home nav ul li :hover {
   cursor: pointer;
   background-color: #28c76f;
 }
 
-body .home .info-wrapper {
+.home .info-wrapper {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
@@ -89,25 +89,25 @@ body .home .info-wrapper {
   color: #e7e7e7;
 }
 
-body .home .info-wrapper .header-info {
+.home .info-wrapper .header-info {
   line-height: 1.9em;
   margin-bottom: 20px;
 }
 
-body .home .info-wrapper .header-info h2 {
+.home .info-wrapper .header-info h2 {
   color: #28c76f;
   font-size: 1.9em;
 }
 
-body .home .info-wrapper .header-description {
+.home .info-wrapper .header-description {
   color: #c9c9c9;
 }
 
-body .home .info-wrapper .header-description .tags {
+.home .info-wrapper .header-description .tags {
   margin-top: 30px;
 }
 
-body .home .info-wrapper .header-description .tags .tag {
+.home .info-wrapper .header-description .tags .tag {
   border: 1px solid #286955;
   padding: 5px;
   margin-right: 10px;
@@ -115,7 +115,7 @@ body .home .info-wrapper .header-description .tags .tag {
   text-align: center;
 }
 
-body .home .header-image {
+.home .header-image {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
@@ -167,6 +167,7 @@ body .home .header-image {
 
 .main .season-menu :focus {
   background-color: #81fbb8;
+  outline: none;
 }
 
 .main .season-menu :target {
@@ -285,10 +286,10 @@ body .home .header-image {
 }
 
 .season {
+  outline: none;
   margin: 10px;
   padding: 12px 15px;
   text-align: center;
-  text-transform: uppercase;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background-size: 200% auto;
@@ -296,6 +297,7 @@ body .home .header-image {
   border-radius: 5px;
   display: block;
   background-color: #28c76f;
+  border: none;
 }
 
 .season:hover {
@@ -307,35 +309,6 @@ body .home .header-image {
 
 .episodes-hide {
   display: none;
-}
-
-footer {
-  padding: 20px;
-  text-align: center;
-  background-color: #212529;
-  color: #dee1e4;
-}
-
-footer .contact-icons {
-  margin: 5px;
-  padding: 5px;
-}
-
-footer .contact-icons > a {
-  margin: 5px;
-}
-
-footer a {
-  text-decoration: none;
-  color: #dee1e4;
-}
-
-footer a > i {
-  font-size: 20px;
-}
-
-footer a > i:hover {
-  color: #81fbb8;
 }
 
 #season-0 > .episode {
@@ -387,5 +360,49 @@ footer a > i:hover {
 
 #to-top:hover {
   background-color: #ce6300;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #212529;
+  color: #dee1e4;
+}
+
+footer .contact-icons {
+  margin: 5px;
+  padding: 5px;
+}
+
+footer .contact-icons > a {
+  margin: 5px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #dee1e4;
+}
+
+footer a > i {
+  font-size: 20px;
+}
+
+footer a > i:hover {
+  color: #81fbb8;
+}
+
+@media screen and (max-width: 750px) {
+  .home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .home .header-image {
+    visibility: hidden;
+  }
 }
 /*# sourceMappingURL=main.css.map */
