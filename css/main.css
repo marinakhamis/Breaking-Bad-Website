@@ -346,6 +346,11 @@ footer a > i:hover {
   display: block;
 }
 
+.show-more-wrap {
+  width: 100%;
+  text-align: center;
+}
+
 .show-more {
   display: inline-block;
   margin: 10px auto;

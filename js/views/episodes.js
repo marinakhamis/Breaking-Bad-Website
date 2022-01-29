@@ -38,11 +38,13 @@ fetch("https://www.breakingbadapi.com/api/episodes")
     .then(() => {
         const all = document.getElementById("season-0");
         const showMoreBtn = document.createElement("button");
+        const showMoreWrap = document.createElement("div");
         showMoreBtn.id = "show-more"
         showMoreBtn.className = "show-more"
         showMoreBtn.innerText = "Show more"
-
-        all.appendChild(showMoreBtn)
+        showMoreWrap.className = "show-more-wrap"
+        showMoreWrap.appendChild(showMoreBtn)
+        all.appendChild(showMoreWrap)
     })
     .then(() => {
         const loadmore = document.querySelector('#show-more');
@@ -72,7 +74,6 @@ function addEpisodes(e, x) {
     episodeCard.innerHTML =
         `
         <p class="epi_num"> #${e.episode_id} </p>
-
     <div class="episode-info">
         <p class="episode-num"> <i class="fas fa-flask"></i> <b id="season-num"> s${e.season}. </b><b id="episode-num">e${e.episode} </b> </p>
         <h3 class="episode-title" id="episode-title"> ${e.title} </h3>
@@ -80,7 +81,6 @@ function addEpisodes(e, x) {
     </div>
     `
     document.getElementById(`season-${x}`).append(episodeCard);
-
 
 }
 
