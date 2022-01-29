@@ -272,15 +272,6 @@ body {
   /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
 }
 
-.season {
-  padding: 10px;
-  color: #ffffff;
-  margin-left: 10px;
-  outline: none;
-  background-color: #81c09b;
-  border: none;
-}
-
 .pick-season {
   padding: 10px;
 }
@@ -393,6 +384,7 @@ footer a > i:hover {
 
 @media screen and (max-width: 750px) {
   .home {
+    font-size: 0.9em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -400,9 +392,59 @@ footer a > i:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: 80vh;
+  }
+  .home nav {
+    font-size: 0.9em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background-color: #000000c9;
+    height: 10vh;
+  }
+  .home nav .logo {
+    margin-left: 20px;
+    width: 40px;
+    height: 100%;
+  }
+  .home nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .home .header-image {
-    visibility: hidden;
+    display: none;
+  }
+  .home .header-description .tags {
+    font-size: 0.9em;
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .home .header-description .tags .tag {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .season {
+    font-size: 0.9em;
+    padding: 7px 10px;
   }
 }
 /*# sourceMappingURL=main.css.map */
